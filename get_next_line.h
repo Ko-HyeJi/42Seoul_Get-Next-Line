@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 21:00:30 by hyko              #+#    #+#             */
-/*   Updated: 2022/02/16 21:51:04 by hyko             ###   ########.fr       */
+/*   Updated: 2022/02/18 18:42:28 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 # ifndef BUFFER_SIZE
 
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 10000000
 
 # endif
 
