@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 20:59:49 by hyko              #+#    #+#             */
-/*   Updated: 2022/02/18 20:09:13 by hyko             ###   ########.fr       */
+/*   Updated: 2022/02/18 20:48:18 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ char	*gnl_read(int fd)
 		free(read_line);
 		return (NULL);
 	}
+	read_line[read_size] = '\0';
 	return (read_line);
 }
 
