@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 20:59:49 by hyko              #+#    #+#             */
-/*   Updated: 2022/02/20 19:18:50 by hyko             ###   ########.fr       */
+/*   Updated: 2022/02/20 20:08:29 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,17 +98,19 @@ char	*gnl_expand_backup(char *backup, int fd)
 char	*gnl_cut_backup(char *backup, char *return_line)
 {
 	char	*new_backup;
-	int		line_len;
+	int		backup_len;
+	int		return_len;
 
 	if (backup == NULL || return_line == NULL)
 		return (NULL);
-	line_len = ft_strlen(return_line);
-	if ((int)ft_strlen(backup) == line_len)
+	backup_len = ft_strlen(backup);
+	return_len = ft_strlen(return_line);
+	if (backup_len == return_len)
 	{
 		free(backup);
 		return (NULL);
 	}
-	new_backup = ft_substr(backup, line_len, ft_strlen(backup) - line_len);
+	new_backup = ft_substr(backup, return_len, backup_len - return_len);
 	free(backup);
 	return (new_backup);
 }
