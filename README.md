@@ -1,1 +1,1 @@
-# 42Seoul_Get-Next-Line
+# 42seoul_Get-Next-Line
