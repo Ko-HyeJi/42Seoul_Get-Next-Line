@@ -6,16 +6,17 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:09:38 by hyko              #+#    #+#             */
-/*   Updated: 2022/02/21 11:09:41 by hyko             ###   ########.fr       */
+/*   Updated: 2022/02/21 12:51:48 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
 
-# define GET_NEXT_LINE_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 char	*get_next_line(int fd);
 char	*gnl_expand_backup(char *backup, int fd);

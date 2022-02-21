@@ -52,7 +52,7 @@ Mkfile.old
 dkms.conf
 
 
-main.c
+main*
 *.txt
-tests
+test_files
 gnlTester

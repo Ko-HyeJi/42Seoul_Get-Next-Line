@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 20:59:49 by hyko              #+#    #+#             */
-/*   Updated: 2022/02/20 20:08:29 by hyko             ###   ########.fr       */
+/*   Updated: 2022/02/21 15:03:04 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ char	*get_next_line(int fd)
 		return_line = ft_substr(backup, 0, nl_idx + 1);
 		backup = gnl_cut_backup(backup, return_line);
 		return (return_line);
-	}
+	}	
 	return (get_next_line(fd));
 }
 
 int	gnl_find_newline(char *backup)
 {
 	int	idx;
-	int len;
+	int	len;
 
 	if (backup == NULL)
 		return (-1);

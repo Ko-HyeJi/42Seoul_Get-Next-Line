@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:09:20 by hyko              #+#    #+#             */
-/*   Updated: 2022/02/21 11:09:23 by hyko             ###   ########.fr       */
+/*   Updated: 2022/02/21 15:17:00 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*get_next_line(int fd)
 {
-	static char	*backup[_SC_OPEN_MAX];
+	static char	*backup[OPEN_MAX];
 	char		*return_line;
 	int			nl_idx;
 	int			pre_len;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd > OPEN_MAX || BUFFER_SIZE <= 0)
 		return (NULL);
 	nl_idx = gnl_find_newline(backup[fd]);
 	if (nl_idx == -1)
@@ -41,7 +41,7 @@ char	*get_next_line(int fd)
 int	gnl_find_newline(char *backup)
 {
 	int	idx;
-	int len;
+	int	len;
 
 	if (backup == NULL)
 		return (-1);
