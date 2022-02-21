@@ -6,7 +6,7 @@
 /*   By: hyko <hyko@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:09:38 by hyko              #+#    #+#             */
-/*   Updated: 2022/02/21 12:51:48 by hyko             ###   ########.fr       */
+/*   Updated: 2022/02/21 19:03:21 by hyko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+
+# ifndef OPEN_MAX
+
+#  define OPEN_MAX 10240
+
+# endif
 
 char	*get_next_line(int fd);
 char	*gnl_expand_backup(char *backup, int fd);
